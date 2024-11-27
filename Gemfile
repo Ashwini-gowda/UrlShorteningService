@@ -9,7 +9,7 @@ gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
-gem 'bootstrap', '~> 4.4.1'
+gem 'bootstrap', '~> 5.3.3'
 gem 'simple_form'
 gem "nested_form"
 gem 'rabl'
