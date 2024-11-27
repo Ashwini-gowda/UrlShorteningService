@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+<div>
+  <p>
+    <strong>Original:</strong>
+    <%= @url_shortener.original %>
+  </p>
+
+  <p>
+    <strong>Short:</strong>
+    <%= request.base_url+"/"+@url_shortener.short %>
+  </p>
+
+</div>
+
+<div>
+  <%= link_to "Edit this url shortener", edit_url_shortener_path(@url_shortener) %> |
+  <%= link_to "Back to url shorteners", url_shorteners_path %>
+
+  <%= button_to "Destroy this url shortener", @url_shortener, method: :delete %>
+</div>
+

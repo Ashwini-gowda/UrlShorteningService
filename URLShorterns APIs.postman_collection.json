@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "1206a919-eec0-4e99-839f-5db9863f3b51",
+		"name": "URLShorterns APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15999527"
+	},
+	"item": [
+		{
+			"name": "List API",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJzdWIiOjEsImV4cCI6MTk3NDU5ODgyNjh9lEIDTiijzswIYKAYKhc6EaLpVpJ0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/url_shorteners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"url_shorteners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJzdWIiOjEsImV4cCI6MTk3NDU5ODgyNjh9lEIDTiijzswIYKAYKhc6EaLpVpJ0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/url_shorteners?original=http://localhost:8003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"url_shorteners"
+					],
+					"query": [
+						{
+							"key": "original",
+							"value": "http://localhost:8003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update API",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJzdWIiOjEsImV4cCI6MTk3NDU5ODgyNjh9lEIDTiijzswIYKAYKhc6EaLpVpJ0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/url_shorteners/:id?original=http://localhost:8002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"url_shorteners",
+						":id"
+					],
+					"query": [
+						{
+							"key": "original",
+							"value": "http://localhost:8002"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete API",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJzdWIiOjEsImV4cCI6MTk3NDU5ODgyNjh9lEIDTiijzswIYKAYKhc6EaLpVpJ0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/url_shorteners/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"url_shorteners",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display API",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJzdWIiOjEsImV4cCI6MTk3NDU5ODgyNjh9lEIDTiijzswIYKAYKhc6EaLpVpJ0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/url_shorteners/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"url_shorteners",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

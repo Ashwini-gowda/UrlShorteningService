@@ -1,0 +1,48 @@
+<p style="color: green"><%= notice %></p>
+
+<h2>URL Shorterns </h2>
+
+<div class="text-right p-2">
+  <%= link_to '+ New url shortene', new_url_shortener_path,
+    class: "btn btn-outline-primary" %>
+</div>
+
+<div class="row">
+  <div class="container-fluid mt-3">
+    <div class="table-responsive-sm bg-white shadow-bottom">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sl. No.</th>
+            <th>Original URL</th>
+            <th>Short URL</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% page = @url_shorteners.current_page %>
+          <% @url_shorteners.each_with_index do |url, index| %>
+            <tr>
+              <td><%= (((page == 0 ? 1 : page) - 1) * 10) + (index + 1) %></td>
+              <td><%= url.original %></td>
+              <td><%= url.short %></td>
+              <td>
+                <div class="btn-stack">
+                  <%= link_to 'Details', url, remote: true,
+                    class: "btn btn-sm btn-outline-info" %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+          <% if @url_shorteners.blank? %>
+            <tr>
+              <td colspan="5"><center><h4>No records found for you!</h4></center></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
